@@ -1,0 +1,14 @@
+---
+layout: layout.html
+---
+
+<h1>My Page</h1>
+<div class="container">
+    <a href="./page/index.html">PAGE</a>
+    <a href="./test/index.html">Test</a>
+</div>
+
+{% for page in collections.page %}
+  <h2><a href="{{page.url}}">{{ page.data.title }}</a></h2>
+  <p>{{ post.content }}</p>
+{% endfor %}

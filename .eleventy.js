@@ -4,7 +4,9 @@ const markdownItInclude = require('markdown-it-include');
 const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("bundle.css");
+    eleventyConfig.addPassthroughCopy("src/css/");
+    eleventyConfig.addPassthroughCopy("src/assets/");
+    eleventyConfig.addWatchTarget("src/css/");
 
     const md = markdownIt({
         html: true,
@@ -21,4 +23,11 @@ module.exports = function(eleventyConfig) {
       );
 
   eleventyConfig.setLibrary("md", md);
+
+  return {
+    dir: {
+      input: "src",
+      output: "public"
+    }
+  }
 };

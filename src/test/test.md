@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout.html
 title: "Demo content page"
 date: 2023-09-05
 draft: false

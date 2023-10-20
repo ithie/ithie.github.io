@@ -1,3 +1,9 @@
+@import url('./reset.css');
+
+body {
+    background-color: aliceblue;
+}
+
 p {
     font-weight: 800;
     color: blue;
