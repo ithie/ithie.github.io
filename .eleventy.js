@@ -1,6 +1,7 @@
 const markdownIt = require("markdown-it");
 const markdownItContainer = require("markdown-it-container");
 const markdownItInclude = require('markdown-it-include');
+const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("bundle.css");
@@ -9,8 +10,15 @@ module.exports = function(eleventyConfig) {
         html: true,
         breaks: true,
         linkify: true
-      }).use(markdownItContainer, 'container').use(markdownItInclude, '/_includes');
+      }).use(
+        markdownItContainer, 'container'
+      ).use(
+        markdownItInclude, '/_includes'
+      ).use(
+        markdownItAttrs, {
+          allowedAttributes: ['id', 'class']
+        }
+      );
 
-      console.log(md.render(':::: container cl\n*content*\n\n'));
   eleventyConfig.setLibrary("md", md);
 };
