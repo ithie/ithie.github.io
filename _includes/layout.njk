@@ -1,16 +1,15 @@
+---
+title: Fancy
+---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fancy</title>
+    <title>{{ title }}</title>
     <link ref="stylesheet" href="./bundle.css" />
   </head>
   <body>
-    <div>My Page</div>
-<div class="container">
-    <a href="./page/index.html">PAGE</a>
-    <a href="./test/index.html">Test</a>
-</div>
+    {{ content | safe }}
   </body>
 </html>
