@@ -27,8 +27,8 @@ Content
 * Number 2
 
 ::: container {.container} 
-
-class\ncontent\n
+Content inside of the container
+:::
 
 <p class='specialParagraph'>
 
